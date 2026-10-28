@@ -125,7 +125,7 @@ export class DetailComponent implements OnInit {
           this.multi = [...this.chartData];
           
           this.loaderService.hide();
-        } else {
+        } else if (data !== undefined) {
           console.log('Pas de données de participation pour le pays.');
           this.location.replaceState('/not-found');
           window.location.reload();
